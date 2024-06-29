@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/home/powerstorm/dbms/t-o.css"> 
+<title>install -oracledb </title>
+</head>
+
+<body>
+<div class="io1">
+<h1>How to install Oracle database <br>on linux.</h1>
+</div> <br> 
+
+<h2 class="he2">Wellcome to tutorial. </h2><br> 
+<p> Hello guies in todays world lurning DataBase Management system can open more opportunities for getting a job. and we don't want to anyone missed this opportunity. that's why we brot this tutorial<br> in this tutorial we are going to focus on Oracle Database!<br> I'll gide you through this process step by step.<br>So let's begin.</p><br>
+<h2 class="he2">Prerequesits:</h2><br>
+
+<ul class="he2">
+<li>any linux distro.</li>
+<li>preinstalled podman/docker </li>
+</ul>
+<h2>1 fetching database from container-registry.oracle.com</h2>
+<p>at first we have to pull the container image from Oracles website for that use this: <span style="background-color: #4B0082";> podman pull container-registry.oracle.com/database/express:21.3.0-xe</span><br> With this command you can pull the image file of database for installation </p> 
+<h2>Starting installation in podman:</h2>
+<p>now this is the stage from where main work will begin!<br> for install the database use this:<span style="background-color: #4B0082";> podman run -d --name oracle-xe -p 1521:1521 container-registry.oracle.com/database/express:21.3.0-xe</span>span><br>
+<b>Explanation of options:</b><br>
+<ul><br>
+<li>-d: This runs the container in detached mode, allowing the container to run in the background.</li><br>
+<li>--name oracle-xe: This assigns a name (oracle-xe) to the container for easier identification and management.</li><br>
+<li>-p 1521:1521:  This maps the container's port 1521 (the default Oracle database port) to your host machine's port 1521. This allows you to connect to the database from your host machine.</li>
+</ul>
+</p>
+<h2>2. Connect to the Database:</h2><br>
+<p>There are two main tools you can use to connect to the database and work with PL/SQL:<br> <b>SQL*Plus:</b><br> 
+This is a command-line tool included with the Oracle database installation. You might need to install it separately depending on your operating system.
+Here's how to connect with SQL*Plus: <br> 
+<ol>
+<li>Open a terminal window.</li><br>
+<li>Type sqlplus and press Enter.</li><br>
+<li>When prompted for username, enter sys (default administrator account).</li><br>
+<li>When prompted for password, enter the password you set during the database installation (default password for XE is usually oracle).</li><br>
+</ol>
+</p> <p>So hear is the gide for installing oracle Database on your linux distro. Now you can start your program development jurny./p>
+<h2 class="he2">thank you so much.</h2><br>
+
+<h2>Contact Us</h2>
+<p>If you have any questions, feel free to reach out at <a href="mailto:contact@techocean.com">contact@techocean.com</a>.</p>
+
+<h2>Follow Us</h2>
+<p>Stay updated by following us on our social media channels:</p>
+<ul>
+    <li><a href="https://www.youtube.com/techocean">YouTube</a></li>
+    <li><a href="https://www.twitter.com/techocean">Twitter</a></li>
+    <li><a href="https://www.facebook.com/techocean">Facebook</a></li>
+</ul>
+</body>
+</html>
